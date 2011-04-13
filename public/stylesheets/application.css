@@ -1,0 +1,10 @@
+#wrapper {
+	margin:0 auto;
+	width:500px;
+}
+img {
+	display:none;
+}
+h2, h4 {
+	display:inline-block;
+}

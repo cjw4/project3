@@ -1,0 +1,11 @@
+<h2>To do list </h2> <h4> (<%= current_user.email %>) </h4>
+<%= link_to 'Sign out', destroy_user_session_path %><br />
+<input type="text" id="txtTask" /><span id="loading"><%= image_tag 'ajax-loader.gif' %></span><br />
+<input type="button" value="add task" id="addTask" /><br />
+
+
+<ul>
+<% @tasks.each do |task| %>
+	<li class="listItem"><%= task.content %><input type="button" value="delete" class="deleteBtn" id="<%= task.id %>"></li>
+<% end %>
+</ul>
