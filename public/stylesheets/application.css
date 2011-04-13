@@ -8,3 +8,6 @@ img {
 h2, h4 {
 	display:inline-block;
 }
+a {
+	color:blue;
+}
