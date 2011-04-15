@@ -3,9 +3,5 @@
 <input type="text" id="txtTask" /><span id="loading"><%= image_tag 'ajax-loader.gif' %></span><br />
 <input type="button" value="add task" id="addTask" /><br />
 
-
-<ul>
-<% @tasks.each do |task| %>
-	<li class="listItem"><%= task.content %><input type="button" value="delete" class="deleteBtn" id="<%= task.id %>"></li>
-<% end %>
-</ul>
+<div id="tasksContainer">
+</div>

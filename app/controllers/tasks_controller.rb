@@ -4,6 +4,13 @@ class TasksController < ApplicationController
     @tasks = current_user.tasks.all
   end
   
+  def tasks
+    @tasks = current_user.tasks.all
+    respond_to do |format|
+      format.html { render :partial => 'tasks' }
+    end
+  end
+  
   def create
     @task = current_user.tasks.create!({ :content => params["content"] })
     

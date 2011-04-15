@@ -4,6 +4,7 @@ Tasks::Application.routes.draw do
 
   root :to => 'tasks#index'
   resources :tasks, :only => [:index, :create, :destroy]
+  match 'partial/tasks' => "tasks#tasks"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
